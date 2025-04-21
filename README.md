@@ -7,13 +7,13 @@ In this hands-on lab, I deployed a FortiGate Next-Generation Firewall within Mic
 I routed all security logs generated during these activities to Microsoft Sentinel. From there, I created alerts and carried out real-time incident responses, including analyzing threats and blocking malicious IP addresses. This project gives me practical experience in cloud security, threat monitoring, and automated response using industry-standard tools.
 
 ### Key Components
-- Setting up core Azure components such as Resource Group, Virtual Networks (VNETs),      subnets, Bastion Services and networking configurations.
+- Setting up core Azure components such as Resource Group, Virtual Networks (VNETs), subnets, Bastion Services and networking configurations.
 - Creation of 2 Virtual Machines is accessible via secure bastion RDP connection.
 - Deploying FortiGate firewall and configuring firewall rules
-- Implementation of Intrusion Prevention Systems (IPS) using FortiGate for robust         network security.
-- Creation and deployment of a Log Analytics Workspace and connecting the FortiGate       firewall to enable centralized and efficient log management.
+- Implementation of Intrusion Prevention Systems (IPS) using FortiGate for robust network security.
+- Creation and deployment of a Log Analytics Workspace and connecting the FortiGate firewall to enable centralized and efficient log management.
 - Connecting Microsoft Sentinel to Log Analytics Workspace.
-- Utilization of Microsoft Sentinel to create alerts, perform incident response, and      maintain the security and integrity of the network..
+- Utilization of Microsoft Sentinel to create alerts, perform incident response, and maintain the security and integrity of the network..
 
 ### Skills Learned
 
@@ -23,19 +23,10 @@ I routed all security logs generated during these activities to Microsoft Sentin
 - Compliance & Risk Management.
 
 ### Tools Used
-- SonarQube : for carrying out static analysis of our code.
-- Burp Suite: use to carry out manual tests and also capture HTTP Post Request Header.
-- OWASP ZAP: to conduct automated vulnerability scans on the web application.
-- SQLMap: for detecting and performing SQL injection vulnerability present in the Client Detail System.
-
-### About the System
-The Client Details System (version 1.0) is a web-based application built using PHP, CSS, Bootstrap, and JavaScript. It serves as a centralized platform for managing client information, providing both user and administrator panels. The user panel facilitates the entry and retrieval of client details, while the administrator panel empowers system management and user administration.
-
-### Threat Considered
-Due to the vulnerability found in our assessment of the Client Details System 1.0, we discovered that the “uemail” parameter allows SQL Injection. We exploited this vulnerability and compromised the application, thereby able to access user data (username and password) and the underlying database information CVE-2023-7137.     
-
-### Attack scenario
-For this vulnerability assessment, the attack scenarios considered include firstly, an attacker exploiting vulnerabilities in input validation mechanisms of the Client Details System to inject malicious SQL queries into user input fields and potentially gaining unauthorized access to the database and executing arbitrary commands. Secondly, the attacker can also bypass authentication mechanisms to gain unauthorized access to privileged functionalities within the system. Thirdly, attackers can also use automated tools to attempt and guess admin credentials to gain uncontrolled access.
+- Microsoft Sentenial (SIEM) system for log ingestion and analysis.
+- Basion Service for secure RDP Desktop into the VMs.
+- Fortinet Fortigate for Intrusion Prevention System, Nework security and control of traffic.
+- Kusto Query Language for log Analysis.
 
 ### Steps
 1. OWAS ZAP: Used OWASP ZAP, an open-source web application security scanner, to conduct automated vulnerability scans on the http://localhost/clientdetailsystem. We Configured ZAP to perform comprehensive scans, including both passive and active scanning, then reviewed the scan results to identify and prioritize potential security vulnerabilities detected by OWASP ZAP. As shown in Proof of Concept, BLIND SQL injection and UNION Query SQL inject were identified as critical vulnerability.  
