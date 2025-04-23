@@ -1,4 +1,4 @@
-# Cloud SIEM Implementation and Log Analysis
+# Microsoft Sentinel SIEM Lab with FortiGate NGFW Integration in Azure
 
 ## Overview
 
