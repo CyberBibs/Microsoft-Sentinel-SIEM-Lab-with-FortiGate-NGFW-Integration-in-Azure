@@ -74,6 +74,13 @@ I processed to sign in to `BibFW NGFW` by accessing the web application using th
 ### 3. Firewall Configuration
 
 I renamed the firewall interfaces by navigating to the network section on the hamburger menu and selecting the interface option. I allowed ssh and ping traffic for `bibDMZ` interface and for the `bibWAN` interface, I allowed https and ping traffic for management purposes. (Note: in an Enterprise environment, this is not recommended).
+![Screenshot 2025-04-20 012903](https://github.com/user-attachments/assets/4c0930b2-bfae-473c-9217-9115e2f49d8c)
+![Screenshot 2025-04-20 013217](https://github.com/user-attachments/assets/41ef0118-28f3-4dad-87b8-e9cd97516301)
+
+Next, I confirmed the static routes configuration 
+![Screenshot 2025-04-20 020429](https://github.com/user-attachments/assets/4e37bc29-8524-43ac-af20-eecc51f43f52)
+
+
 
 
 1. OWAS ZAP: Used OWASP ZAP, an open-source web application security scanner, to conduct automated vulnerability scans on the http://localhost/clientdetailsystem. We Configured ZAP to perform comprehensive scans, including both passive and active scanning, then reviewed the scan results to identify and prioritize potential security vulnerabilities detected by OWASP ZAP. As shown in Proof of Concept, BLIND SQL injection and UNION Query SQL inject were identified as critical vulnerability.  
