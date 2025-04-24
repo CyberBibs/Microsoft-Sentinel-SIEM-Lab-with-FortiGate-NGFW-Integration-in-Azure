@@ -108,7 +108,15 @@ Under the networking tab, I selected the `bibnet` we created as our virtual netw
 The Linux virtual machine is successfully deployed
 ![Screenshot 2025-04-20 025823](https://github.com/user-attachments/assets/2c77a324-0822-4ebc-b383-90b2b8de1cab)
 
+### 5. Custom Route Tables
 
+I created two (2) route tables to override Azure’s default routing. This allows us route traffic to `bibFW` firewall we created earlier. An Azure Route Table (also known as a User-Defined Route (UDR)) is a networking feature in Microsoft Azure that allows you to control the routing of network traffic in your virtual network (VNet).
+
+I created a route table and named it `bibDMZ-RouteTable` 
+![Screenshot 2025-04-20 031825](https://github.com/user-attachments/assets/4ada4d33-dfcd-4469-a551-1c4ff36bcc71)
+
+I created `ToTheInternet` route to the routing table.
+![Screenshot 2025-04-20 033532](https://github.com/user-attachments/assets/64f0f3a7-2548-4dba-8123-57b799662bdc)
 
 
 
