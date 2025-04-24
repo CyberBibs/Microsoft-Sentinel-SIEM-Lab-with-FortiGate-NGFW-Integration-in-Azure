@@ -149,7 +149,27 @@ To resolve the connectivity issue, I created a new firewall policy(`DMZtoTheInte
 
 Upon creating the `DMZtoTheInternet` above, I was able to ping 8.8.8.8. This proves internet connectivity.
 ![Picture2](https://github.com/user-attachments/assets/c565503f-1cf5-4153-a240-2ce483e366cf)
-The above step proves outbound connectivity to the internet from bibDMZ subnet.
+
+The above step proves outbound connectivity to the internet from `bibDMZ` subnet.
+
+Next, I created the path for inbound connectivity from the Internet to `bibDMZ` subnet . I configures NAT on `bibFW` firewall by creating a virtual IP named Window-NAT-RDP. I enabled port forwarding and mapped the external IP address to a my `bibWIN` IP address
+![Screenshot 2025-04-20 090450](https://github.com/user-attachments/assets/c36b9247-408f-4e1e-9e66-88859b155d84)
+
+I then created a firewall policy on `bibFW` called `InternetTobibWinRDP` to allow only RDP traffic from the internet to `bibWIN` via the firewall
+![Screenshot 2025-04-20 091651](https://github.com/user-attachments/assets/bb2a2574-f77e-40e9-8c8b-0e1d745457ad)
+![Screenshot 2025-04-20 091844](https://github.com/user-attachments/assets/51839f73-edd6-4837-a841-f065dab67370)
+
+To test the RDP connection from the Internet to `bibWIN`, I disabled the firewall in `bibWIN`, allowed all traffic in `bibWIN` by changing RDP settings in  `bibWIN`  and proceeded to using RDP from my personal computer to `bibWin` hosted in azure
+![Screenshot 2025-04-20 093118](https://github.com/user-attachments/assets/81a413b9-bfa2-444c-baf8-926f4fbd28d7)
+![Screenshot 2025-04-20 093250](https://github.com/user-attachments/assets/75eaba5b-7204-4614-b6c6-c228bfed7a59)
+
+After disabling `bibWIN` firewall, I was able to connect. This proves RDP traffic from the Internet to bibWIN is good and working as expected as I was able to RDP from my personal computer
+![Screenshot 2025-04-20 094006](https://github.com/user-attachments/assets/8fbe4334-23df-48b3-8b56-fab0b4500088)
+
+
+
+
+
 
 
 
