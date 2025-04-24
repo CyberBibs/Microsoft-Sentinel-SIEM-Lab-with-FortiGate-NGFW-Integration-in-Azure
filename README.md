@@ -33,13 +33,13 @@ I routed all security logs generated during these activities to Microsoft Sentin
 
 ### Project Setup and Configuration Steps
 
-<centre>The first step I took was creating  a **Resource Group**: `biblab` in Canada Central region. A resource group in Azure is a logical grouping of tools, services, configurations and more that exist under one banner so they can be created and deleted at the same time (they share the same lifespan). If I have resources outside of a particular resource group, if I delete that resource group the ones outside of it will still exist. It makes it easier to manage your resources if they're all in the same place. </center> <br>
+The first step I took was creating  a **Resource Group**: `biblab` in Canada Central region. A resource group in Azure is a logical grouping of tools, services, configurations and more that exist under one banner so they can be created and deleted at the same time (they share the same lifespan). If I have resources outside of a particular resource group, if I delete that resource group the ones outside of it will still exist. It makes it easier to manage your resources if they're all in the same place. 
 ![Screenshot 2025-04-19 231135](https://github.com/user-attachments/assets/1dc6f81b-346a-4b1e-bcaa-a0756d7fd82b)
 
 The next step is to create a Virtual networt (Vnet). A Vnet is basically fundamental building block in Microsoft Azure for your private network in the cloud. It allows many types of Azure resources—like virtual machines (VMs), databases, and application services—to securely communicate with each other, the internet, and on-premises networks.  I named my Vnet bibnet
 ![vnet](https://github.com/user-attachments/assets/b0635440-2c60-4c74-af07-df0f6d057245)
 
-Under the security tab in the vnet creation process, I enabled Azure Bastion. Azure Bastion is a fully managed Platform-as-a-Service (PaaS) that provides secure and seamless RDP (Remote Desktop Protocol) and SSH (Secure Shell) access to your virtual machines directly through the Azure portal, without needing any public IP addresses on those VMs.
+Under the security tab in the vnet creation process, I enabled Azure Bastion with Hostname: `bibnet-Bastion` & Public IP: `bibnet-bastion-public-IP`. Azure Bastion is a fully managed Platform-as-a-Service (PaaS) that provides secure and seamless RDP (Remote Desktop Protocol) and SSH (Secure Shell) access to your virtual machines directly through the Azure portal, without needing any public IP addresses on those VMs.
 ![vnet](https://github.com/user-attachments/assets/588aacab-287f-44e7-9581-ce859fc5efd5)
 
 Enable **Azure Bastion**:
