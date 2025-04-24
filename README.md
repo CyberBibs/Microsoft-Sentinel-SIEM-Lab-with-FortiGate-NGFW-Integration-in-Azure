@@ -148,7 +148,8 @@ To resolve the connectivity issue, I created a new firewall policy(`DMZtoTheInte
 ![Screenshot 2025-04-20 051112](https://github.com/user-attachments/assets/dafd0b1f-1f8e-4a1c-9eee-856195184426)
 
 Upon creating the `DMZtoTheInternet` above, I was able to ping 8.8.8.8. This proves internet connectivity.
-
+![Picture2](https://github.com/user-attachments/assets/c565503f-1cf5-4153-a240-2ce483e366cf)
+The above step proves outbound connectivity to the internet from bibDMZ subnet.
 
 
 
