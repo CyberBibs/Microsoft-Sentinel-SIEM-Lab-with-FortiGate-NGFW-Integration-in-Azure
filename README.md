@@ -96,6 +96,30 @@ Under the networking tab, I selected the bibnet we created as our virtual networ
 The window10 virtual machine is successfully deployed
 ![Screenshot 2025-04-20 024232](https://github.com/user-attachments/assets/df9fd9af-c432-493c-9d66-91bd01890d01)
 
+Next, I created a Linux Virtual Machine named `bibLIN`
+![Screenshot 2025-04-20 024849](https://github.com/user-attachments/assets/fcf1aa1a-d490-43a8-b201-c8feff13f965)
+
+I set up a username and password for the windows 10 machine and disabled RDP traffic available via public internet
+![Screenshot 2025-04-20 025011](https://github.com/user-attachments/assets/ffc5a34e-a2d2-4423-8c8a-35b3e98a3310)
+
+Under the networking tab, I selected the `bibnet` we created as our virtual network, selected the `bibDMZ` subnet as our internal network, did not select and public IP address and disabled NIC network security group because I want all network security implemented via the `bibFW` firewall I created earlier.
+![Screenshot 2025-04-20 025354](https://github.com/user-attachments/assets/faa2b698-28db-4e04-8ae7-8330fe65d948)
+
+The Linux virtual machine is successfully deployed
+![Screenshot 2025-04-20 025823](https://github.com/user-attachments/assets/2c77a324-0822-4ebc-b383-90b2b8de1cab)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
