@@ -87,6 +87,22 @@ In the next step, I added Windows10 and a Linux Virtual machine to the network. 
 I created a window 10 Virtual Machine named `bibWIN` 
 ![Screenshot 2025-04-20 022642](https://github.com/user-attachments/assets/881ab577-c240-436d-9ce3-c4bf88ca7b74)
 
+I set up a username and password for the windows 10 machine and disabled RDP traffic available via public internet
+![Screenshot 2025-04-20 022917](https://github.com/user-attachments/assets/339788bf-f6e2-4fb1-93e7-b441c8a8cb51)
+
+Under the networking tab, I selected the bibnet we created as our virtual network, selected the `bibDMZ` subnet as our internal network, did not select and public IP address and disabled NIC network security group because I want all network security implemented via the `bibFW` firewall I created earlier.
+![Screenshot 2025-04-20 023638](https://github.com/user-attachments/assets/5a1af4fb-4dc0-4c5a-9859-8e300b1d95f9)
+
+The window10 virtual machine is successfully deployed
+![Screenshot 2025-04-20 024232](https://github.com/user-attachments/assets/df9fd9af-c432-493c-9d66-91bd01890d01)
+
+
+
+
+
+
+
+
 
 1. OWAS ZAP: Used OWASP ZAP, an open-source web application security scanner, to conduct automated vulnerability scans on the http://localhost/clientdetailsystem. We Configured ZAP to perform comprehensive scans, including both passive and active scanning, then reviewed the scan results to identify and prioritize potential security vulnerabilities detected by OWASP ZAP. As shown in Proof of Concept, BLIND SQL injection and UNION Query SQL inject were identified as critical vulnerability.  
 ![Picture2](https://github.com/user-attachments/assets/8c621698-fb08-40e9-bbab-f3403fe1b5df)
