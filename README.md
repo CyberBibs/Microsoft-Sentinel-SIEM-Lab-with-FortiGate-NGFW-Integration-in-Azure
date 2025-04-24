@@ -33,19 +33,27 @@ I routed all security logs generated during these activities to Microsoft Sentin
 
 ### Project Setup and Configuration Steps
 
-- Create a **Resource Group**: `biblab` in Canada Central region.
+1.  The first step I took was creating  a **Resource Group**: `biblab` in Canada Central region.
 ![Screenshot 2025-04-19 231135](https://github.com/user-attachments/assets/1dc6f81b-346a-4b1e-bcaa-a0756d7fd82b)
 
-- Create a **Virtual Network**: `bibnet`.
-![Screenshot 2025-04-19 232315](https://github.com/user-attachments/assets/a07769e8-8dd8-4c66-9bf4-cab4108ff75f)
+2.	After creating biblab Resource group. I navigated to Virtual Network. The steps here are explained below.
+   a. Create a **Virtual Network**: `bibnet`.
+![vnet](https://github.com/user-attachments/assets/fc99218b-ea2b-48c1-be3e-ef824064ec3d)
 
-- Enable **Azure Bastion**:
+
+  b. Enabled **Azure Bastion** with details below 
   - Hostname: `bibnet-Bastion`
   - Public IP: `bibnet-bastion-public-IP`
-- Subnets:
-  - `bibDMZ` (10.10.2.0/24)
-  - `bibWAN` (10.10.4.0/24)
+  ![Screenshot 2025-04-19 232315](https://github.com/user-attachments/assets/a07769e8-8dd8-4c66-9bf4-cab4108ff75f)
+ c. Created two (2) subnets  Subnets:
+  - `bibDMZ` (10.10.2.0/24) which acts as my Internal network (LAN)
+ ![Screenshot 2025-04-19 233647](https://github.com/user-attachments/assets/458d672f-3fd4-4c5f-ad32-2da855f72a97)
+
+  - `bibWAN` (10.10.4.0/24) acts as the gateway to the internet 
+ ![Screenshot 2025-04-19 234218](https://github.com/user-attachments/assets/9678d8bd-27cf-4ec9-9b10-39e65396a3c4)
+
   - `AzureBastionSubnet` (10.10.9.0/24, manually edited)
+![Screenshot 2025-04-19 235033](https://github.com/user-attachments/assets/c8748030-3980-4ce3-b83b-162930a0861a)
 
 
 
