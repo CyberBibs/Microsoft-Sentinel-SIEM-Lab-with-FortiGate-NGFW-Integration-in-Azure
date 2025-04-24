@@ -167,6 +167,10 @@ After disabling `bibWIN` firewall, I was able to connect. This proves RDP traffi
 ![Screenshot 2025-04-20 094006](https://github.com/user-attachments/assets/8fbe4334-23df-48b3-8b56-fab0b4500088)
 
 
+### 7. Intrusion Prevention System (IPS)
+
+An Intrusion Prevention System (IPS) is a network security tool that monitors network traffic to detect and prevent identified threats.
+
 
 
 
