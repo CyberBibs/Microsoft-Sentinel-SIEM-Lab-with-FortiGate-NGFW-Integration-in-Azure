@@ -17,10 +17,11 @@ I routed all security logs generated during these activities to Microsoft Sentin
 
 ### Skills Learned
 
-- Security Assessment & Analysis.
-- Penetration Testing Skills.
-- Secure Coding & Remediation.
-- Compliance & Risk Management.
+- Cybersecurity & Threat Detection
+- Cloud Security & Networking (Azure)
+- Security Information and Event Management (SIEM)
+- System Administration & VM Management
+- Query Language & Data Analytics
 
 ### Tools Used
 - Microsoft Sentenial (SIEM) system for log ingestion and analysis.
