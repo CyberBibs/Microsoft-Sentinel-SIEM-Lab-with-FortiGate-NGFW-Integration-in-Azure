@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this hands-on lab, I deployed a FortiGate Next-Generation Firewall within Microsoft Azure to build a realistic cloud network with publicly accessible resources. I simulated brute-force attacks and performed network scans to test the firewall’s threat detection and response capabilities.
+This lab simulates a real-world cloud network security environment by deploying a FortiGate Next-Gen Firewall on Microsoft Azure, integrating it with Microsoft Sentinel SIEM for log collection, threat detection, and automated incident response.
 
 I routed all security logs generated during these activities to Microsoft Sentinel. From there, I created alerts and carried out real-time incident responses, including analyzing threats and blocking malicious IP addresses. This project gives me practical experience in cloud security, threat monitoring, and automated response using industry-standard tools.
 
@@ -24,12 +24,34 @@ I routed all security logs generated during these activities to Microsoft Sentin
 - Query Language & Data Analytics
 
 ### Tools Used
-- Microsoft Sentenial (SIEM) system for log ingestion and analysis.
+- Microsoft Azure
+- FortiGate Next-Generation Firewall (NGFW)
 - Basion Service for secure RDP Desktop into the VMs.
-- Fortinet Fortigate for Intrusion Prevention System, Nework security and control of traffic.
+- Microsoft Sentinel
 - Kusto Query Language for log Analysis.
+- Linux & Windows Virtual Machines
 
-### Steps
+### Project Setup and Configuration Steps
+
+- Create a **Resource Group**: `biblab` in Canada Central region.
+![Screenshot 2025-04-19 231135](https://github.com/user-attachments/assets/1dc6f81b-346a-4b1e-bcaa-a0756d7fd82b)
+
+- Create a **Virtual Network**: `bibnet`.
+![Screenshot 2025-04-19 232315](https://github.com/user-attachments/assets/a07769e8-8dd8-4c66-9bf4-cab4108ff75f)
+
+- Enable **Azure Bastion**:
+  - Hostname: `bibnet-Bastion`
+  - Public IP: `bibnet-bastion-public-IP`
+- Subnets:
+  - `bibDMZ` (10.10.2.0/24)
+  - `bibWAN` (10.10.4.0/24)
+  - `AzureBastionSubnet` (10.10.9.0/24, manually edited)
+
+
+
+
+
+
 1. OWAS ZAP: Used OWASP ZAP, an open-source web application security scanner, to conduct automated vulnerability scans on the http://localhost/clientdetailsystem. We Configured ZAP to perform comprehensive scans, including both passive and active scanning, then reviewed the scan results to identify and prioritize potential security vulnerabilities detected by OWASP ZAP. As shown in Proof of Concept, BLIND SQL injection and UNION Query SQL inject were identified as critical vulnerability.  
 ![Picture2](https://github.com/user-attachments/assets/8c621698-fb08-40e9-bbab-f3403fe1b5df)
 
