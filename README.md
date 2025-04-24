@@ -125,6 +125,13 @@ I created a route table and named it `bibWAN-RouteTable`
 I created `ToDMZ` route and added it to the routing table.
 ![Screenshot 2025-04-20 041212](https://github.com/user-attachments/assets/52f50d7c-1a5e-450e-8194-406719307ede)
 
+Next I associated `bibDMZ` to the `ToTheInternet` `bibWAN` subnet to the `ToDMZ` route. This allows all network traffic from `bibDMZ` subnet to pass through the firwall interface with ip 10.10.4.4.
+![Screenshot 2025-04-20 041642](https://github.com/user-attachments/assets/c2b93115-4056-4a9f-8ee0-fd196ae4c12e)
+![Screenshot 2025-04-20 041758](https://github.com/user-attachments/assets/71ce5774-e4ad-480a-b866-d55169a64fea)
+
+and also, 
+
+
 
 
 
