@@ -33,33 +33,22 @@ I routed all security logs generated during these activities to Microsoft Sentin
 
 ### Project Setup and Configuration Steps
 
-1.  The first step I took was creating  a **Resource Group**: `biblab` in Canada Central region.
+<centre>The first step I took was creating  a **Resource Group**: `biblab` in Canada Central region. A resource group in Azure is a logical grouping of tools, services, configurations and more that exist under one banner so they can be created and deleted at the same time (they share the same lifespan). If I have resources outside of a particular resource group, if I delete that resource group the ones outside of it will still exist. It makes it easier to manage your resources if they're all in the same place. </center> <br>
 ![Screenshot 2025-04-19 231135](https://github.com/user-attachments/assets/1dc6f81b-346a-4b1e-bcaa-a0756d7fd82b)
 
-2.	After creating biblab Resource group. I navigated to Virtual Network. The steps here are explained below.
+The next step is to create a Virtual networt (Vnet). A Vnet is basically fundamental building block in Microsoft Azure for your private network in the cloud. It allows many types of Azure resources—like virtual machines (VMs), databases, and application services—to securely communicate with each other, the internet, and on-premises networks.  I named my Vnet bibnet
+![vnet](https://github.com/user-attachments/assets/b0635440-2c60-4c74-af07-df0f6d057245)
 
-  	 a. Create a **Virtual Network**: `bibnet`.
-![vnet](https://github.com/user-attachments/assets/fc99218b-ea2b-48c1-be3e-ef824064ec3d)
+Under the security tab in the vnet creation process, I enabled Azure Bastion. Azure Bastion is a fully managed Platform-as-a-Service (PaaS) that provides secure and seamless RDP (Remote Desktop Protocol) and SSH (Secure Shell) access to your virtual machines directly through the Azure portal, without needing any public IP addresses on those VMs.
+![vnet](https://github.com/user-attachments/assets/588aacab-287f-44e7-9581-ce859fc5efd5)
 
-
-  b. Enabled **Azure Bastion** with details below 
+Enable **Azure Bastion**:
   - Hostname: `bibnet-Bastion`
   - Public IP: `bibnet-bastion-public-IP`
-  ![Screenshot 2025-04-19 232315](https://github.com/user-attachments/assets/a07769e8-8dd8-4c66-9bf4-cab4108ff75f)
- c. Created two (2) subnets  Subnets:
-  - `bibDMZ` (10.10.2.0/24) which acts as my Internal network (LAN)
- ![Screenshot 2025-04-19 233647](https://github.com/user-attachments/assets/458d672f-3fd4-4c5f-ad32-2da855f72a97)
-
-  - `bibWAN` (10.10.4.0/24) acts as the gateway to the internet 
- ![Screenshot 2025-04-19 234218](https://github.com/user-attachments/assets/9678d8bd-27cf-4ec9-9b10-39e65396a3c4)
-
+- Subnets:
+  - `bibDMZ` (10.10.2.0/24)
+  - `bibWAN` (10.10.4.0/24)
   - `AzureBastionSubnet` (10.10.9.0/24, manually edited)
-![Screenshot 2025-04-19 235033](https://github.com/user-attachments/assets/c8748030-3980-4ce3-b83b-162930a0861a)
-
-
-
-
-
 
 1. OWAS ZAP: Used OWASP ZAP, an open-source web application security scanner, to conduct automated vulnerability scans on the http://localhost/clientdetailsystem. We Configured ZAP to perform comprehensive scans, including both passive and active scanning, then reviewed the scan results to identify and prioritize potential security vulnerabilities detected by OWASP ZAP. As shown in Proof of Concept, BLIND SQL injection and UNION Query SQL inject were identified as critical vulnerability.  
 ![Picture2](https://github.com/user-attachments/assets/8c621698-fb08-40e9-bbab-f3403fe1b5df)
