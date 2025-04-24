@@ -54,6 +54,16 @@ I created 2 subnets `bibDMZ` (10.10.2.0/24) acting our my internal network (LAN)
 I waited to confirm the bibnet and all subnets have been created and successfully deployed. 
 ![Screenshot 2025-04-20 000358](https://github.com/user-attachments/assets/b27cf6a7-02e0-4d5d-93bc-d36230f955d9)
 
+### 2. FORTINET FortiGate Firewall Deployment
+Deployed Fortinet FortiGate NGFW: `bibFW`. Fortinet FortiGate NGFW stands for Next-Generation Firewall, and it's a powerful network security device developed by Fortinet. It's not just a traditional firewall it goes beyond basic packet filtering and includes advanced features to protect modern networks from evolving cyber threats.
+![Screenshot 2025-04-20 001347](https://github.com/user-attachments/assets/ae8c280b-1690-4648-9c9a-c23b74c9d4ce)
+
+During the creation of the firewall, I configured the gateway address for our bibDMZ and bibWAN by selecting the subnet I created in step 2 to the appropriate interfaces and selecting our bibnet virtual network. See screenshot below 
+![Screenshot 2025-04-20 004713](https://github.com/user-attachments/assets/aa0fdb9e-b31e-4242-8d92-ce045cf0fdf3)
+
+By default, under the public IP tab a default publicIP interface name is created, and I renamed it to  `bibFW-public`.  `bibFW-public` will be used for public services hosted on the FortiGate such as IPSEC termination, management of the FortiGate from external or services behind the FortiGate such as webserver. 
+![Screenshot 2025-04-20 005523](https://github.com/user-attachments/assets/c4936ab6-d232-442e-bbe0-ae61fa37846b)
+
 
 1. OWAS ZAP: Used OWASP ZAP, an open-source web application security scanner, to conduct automated vulnerability scans on the http://localhost/clientdetailsystem. We Configured ZAP to perform comprehensive scans, including both passive and active scanning, then reviewed the scan results to identify and prioritize potential security vulnerabilities detected by OWASP ZAP. As shown in Proof of Concept, BLIND SQL injection and UNION Query SQL inject were identified as critical vulnerability.  
 ![Picture2](https://github.com/user-attachments/assets/8c621698-fb08-40e9-bbab-f3403fe1b5df)
