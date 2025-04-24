@@ -118,7 +118,11 @@ I created a route table and named it `bibDMZ-RouteTable`
 I created `ToTheInternet` route to the routing table.
 ![Screenshot 2025-04-20 033532](https://github.com/user-attachments/assets/64f0f3a7-2548-4dba-8123-57b799662bdc)
 
+I created a route table and named it `bibWAN-RouteTable`
+![Screenshot 2025-04-20 035651](https://github.com/user-attachments/assets/d5a7b728-c8c7-4412-972f-cf4dd1fe1877)
 
+I created `ToDMZ` route  to the routing table.
+![Screenshot 2025-04-20 041212](https://github.com/user-attachments/assets/52f50d7c-1a5e-450e-8194-406719307ede)
 
 
 
