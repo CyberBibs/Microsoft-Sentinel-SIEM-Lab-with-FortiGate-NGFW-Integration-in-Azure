@@ -129,16 +129,25 @@ Next I associated `bibDMZ` to the `ToTheInternet` `bibWAN` subnet to the `ToDMZ`
 ![Screenshot 2025-04-20 041642](https://github.com/user-attachments/assets/c2b93115-4056-4a9f-8ee0-fd196ae4c12e)
 ![Screenshot 2025-04-20 041758](https://github.com/user-attachments/assets/71ce5774-e4ad-480a-b866-d55169a64fea)
 
-and also, 
+### 6. Network Connectivity Tests
 
+To test and troubleshoot network connectivity. I performed the following steps. I signed into `bibWIN` via Bastion with the username and password I created when deploying the windows 10 virtual machine.
+![Screenshot 2025-04-20 044057](https://github.com/user-attachments/assets/2aec46d2-8e02-418d-8519-2bfa107f904e)
 
+Upon successful signing in to `bibWIN`, I opened command prompt and was able to successfully ping `bibLIN` with its ip address 10.10.2.6. 
+![Screenshot 2025-04-20 045129](https://github.com/user-attachments/assets/1663f0b0-8f46-4323-9bc1-a8546648ebc8)
 
+However, I was unsuccessful when trying to test internet connectivity by pinging google at 8.8.8.8 with the request timed out
+![Screenshot 2025-04-20 045427](https://github.com/user-attachments/assets/33c88228-35c2-4be3-8fc5-92c3ccf744fe)
 
+To fix this, I had to do some troubleshooting, I signed into `bibFW` and checked the firewall policy and discovered all network traffic are explicitly denied by default. As a result, I was not able to access the internet from `bibWIN` machine.
+![Screenshot 2025-04-20 045803](https://github.com/user-attachments/assets/23c1546a-8aea-4cc7-bdb6-bcf03d1c5551)
 
+To resolve the connectivity issue, I created a new firewall policy(`DMZtoTheInternet`) on `bibFW` to allow all ping, https, smtp, and dns network traffic from all devices connected to `bibDMZ` subnet
+![Screenshot 2025-04-20 050725](https://github.com/user-attachments/assets/341e718e-76ca-4fde-8472-96f115dd31b2)
+![Screenshot 2025-04-20 051112](https://github.com/user-attachments/assets/dafd0b1f-1f8e-4a1c-9eee-856195184426)
 
-
-
-
+Upon creating the `DMZtoTheInternet` above, I was able to ping 8.8.8.8. This proves internet connectivity.
 
 
 
