@@ -33,6 +33,8 @@ I routed all security logs generated during these activities to Microsoft Sentin
 
 ### Project Setup and Configuration Steps
 
+### 1. Azure Environment Setup
+
 The first step I took was creating  a **Resource Group**: `biblab` in Canada Central region. A resource group in Azure is a logical grouping of tools, services, configurations and more that exist under one banner so they can be created and deleted at the same time (they share the same lifespan). If I have resources outside of a particular resource group, if I delete that resource group the ones outside of it will still exist. It makes it easier to manage your resources if they're all in the same place. 
 ![Screenshot 2025-04-19 231135](https://github.com/user-attachments/assets/1dc6f81b-346a-4b1e-bcaa-a0756d7fd82b)
 
@@ -49,7 +51,8 @@ I created 2 subnets `bibDMZ` (10.10.2.0/24) acting our my internal network (LAN)
 ![Screenshot 2025-04-19 235033](https://github.com/user-attachments/assets/2e5d74bc-09f7-478d-8e7a-be7a8f504425)
 ![Screenshot 2025-04-19 235248](https://github.com/user-attachments/assets/943e11af-85d1-40be-af33-a66b6e88ce48)
 
-
+I waited to confirm the bibnet and all subnets have been created and successfully deployed. 
+![Screenshot 2025-04-20 000358](https://github.com/user-attachments/assets/b27cf6a7-02e0-4d5d-93bc-d36230f955d9)
 
 
 1. OWAS ZAP: Used OWASP ZAP, an open-source web application security scanner, to conduct automated vulnerability scans on the http://localhost/clientdetailsystem. We Configured ZAP to perform comprehensive scans, including both passive and active scanning, then reviewed the scan results to identify and prioritize potential security vulnerabilities detected by OWASP ZAP. As shown in Proof of Concept, BLIND SQL injection and UNION Query SQL inject were identified as critical vulnerability.  
