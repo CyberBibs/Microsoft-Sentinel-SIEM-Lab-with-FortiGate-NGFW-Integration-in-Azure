@@ -67,13 +67,13 @@ By default, under the public IP tab a default publicIP interface name is created
 After successful deployment, a public IP and a DNS name we can use to connect to our bibFW NGFW was created.
 ![Screenshot 2025-04-20 010918](https://github.com/user-attachments/assets/c647875e-b3c5-4325-9cd3-d204918a3336)
 
-I processed to sign in to BibFW NGFW by accessing the web application using the management IP address created from step 4 and entering the username and password I created earlier.
+I processed to sign in to `BibFW NGFW` by accessing the web application using the management IP address created from step 4 and entering the username and password I created earlier.
 ![Screenshot 2025-04-20 011727](https://github.com/user-attachments/assets/c39b0273-82fb-45cf-b893-d115ef3b5f0e)
 ![Screenshot 2025-04-20 011908](https://github.com/user-attachments/assets/372b678b-a04b-46da-84b7-dea22b37b3cc)
 
+### 3. Firewall Configuration
 
-
-
+I renamed the firewall interfaces by navigating to the network section on the hamburger menu and selecting the interface option. I allowed ssh and ping traffic for `bibDMZ` interface and for the `bibWAN` interface, I allowed https and ping traffic for management purposes. (Note: in an Enterprise environment, this is not recommended).
 
 
 1. OWAS ZAP: Used OWASP ZAP, an open-source web application security scanner, to conduct automated vulnerability scans on the http://localhost/clientdetailsystem. We Configured ZAP to perform comprehensive scans, including both passive and active scanning, then reviewed the scan results to identify and prioritize potential security vulnerabilities detected by OWASP ZAP. As shown in Proof of Concept, BLIND SQL injection and UNION Query SQL inject were identified as critical vulnerability.  
