@@ -37,7 +37,8 @@ I routed all security logs generated during these activities to Microsoft Sentin
 ![Screenshot 2025-04-19 231135](https://github.com/user-attachments/assets/1dc6f81b-346a-4b1e-bcaa-a0756d7fd82b)
 
 2.	After creating biblab Resource group. I navigated to Virtual Network. The steps here are explained below.
-   a. Create a **Virtual Network**: `bibnet`.
+
+  	 a. Create a **Virtual Network**: `bibnet`.
 ![vnet](https://github.com/user-attachments/assets/fc99218b-ea2b-48c1-be3e-ef824064ec3d)
 
 
